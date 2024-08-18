@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PostgreSQL Practice</title>
+  </head>
+  <body>
+    <h1>Users</h1>
+    <ul>
+      <% usernames.forEach(user => { %>
+      <li>ID: <%= user.id %>, Username: <%= user.username %> <% }) %> %></li>
+    </ul>
+    <a href="/new">Add New User</a>
+    <h2>Search Users</h2>
+    <form action="/" method="get">
+      <label for="username">Search Users: </label>
+      <input type="text" name="username" id="username" />
+      <button type="submit">Search</button>
+    </form>
+    <a href="/">Return to Home</a>
+    <h1>Delete Users</h1>
+    <a href="/delete">Delete Users</a>
+  </body>
+</html>
